@@ -1,11 +1,16 @@
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import TodoInput from './components/TodoInput'
+import TodoList from './components/TodoList'
 
-function App() {
-  return (
-    <>
-      <h1>hey</h1>
-    </>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <h1>hey from react</h1>
+        <TodoInput />
+        <TodoList />
+      </div>
+    )
+  }
 }
-
-export default App;
