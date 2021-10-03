@@ -4,7 +4,7 @@ export default class TodoInput extends Component {
     render() {
         return (
             <div>
-                this is todo input
+                <h1>this is todo input</h1>
             </div>
         )
     }
