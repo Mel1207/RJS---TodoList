@@ -26,11 +26,11 @@ export default class App extends Component {
   }
 
   handleEdit = e => {
-    console.log(`handle edit ${id}`)
+    console.log(`handle edit ${this.id}`)
   }
 
   handleDelete = e => {
-    console.log(`deleted item ${id}`)
+    console.log(`deleted item ${this.id}`)
   }
 
 
@@ -40,8 +40,11 @@ export default class App extends Component {
     return (
       <div className="container">
         <div className="row">
-          <TodoInput />
-          <TodoList />
+          <div className="col-10 mx-auto col-md-8 mt-5">
+            <h3 className="text-capitalize text-center">Todo Input</h3>
+            <TodoInput item={this.state.item} handleChange={this.handleChange} handleSubmit={this.handleSubmit} editItem={editItem}/>
+            <TodoList items={this.state.items} clearList={this.clearList} handleDelete={this.handleDelete} handleEdit={this.handleEdit}/>
+          </div>
         </div>
       </div>
     )
