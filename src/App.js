@@ -38,8 +38,6 @@ export default class App extends Component {
       item: '',
       id: uuidv4(),
       editItem: false
-    }, () => {
-      console.log(this.state)
     })
   }
 
