@@ -43,7 +43,9 @@ export default class App extends Component {
   }
 
   clearList = () => {
-    console.log('Clear list')
+    this.setState({
+      items: []
+    })
   }
 
   handleEdit = id => {
