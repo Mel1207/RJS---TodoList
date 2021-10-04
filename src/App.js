@@ -53,7 +53,10 @@ export default class App extends Component {
   }
 
   handleDelete = id => {
-    console.log(`deleted item ${id}`)
+    const filteredItems = this.state.items.filter(i => i.id !== id);
+    this.setState({
+      items: filteredItems
+    })
   }
 
 
