@@ -17,14 +17,29 @@ export default class App extends Component {
     this.setState({
       item: e.target.value
     })
-    // console.log('typed change')
+    // console.log(e.target.value)
   }
 
   handleSubmit = e => {
     e.preventDefault();
 
-    
+    const newItem = {
+      id: this.state.id,
+      title: this.state.item
+    }
+
     // console.log('submitted')
+
+    const updatedItems = [...this.state.items, newItem]
+
+    this.setState({
+      items: updatedItems,
+      item: '',
+      id: uuidv4(),
+      edititem: false
+    }, () => {
+      console.log(this.state)
+    })
   }
 
   clearList = () => {
@@ -43,6 +58,7 @@ export default class App extends Component {
   render() {
     // console.log(this.state.id)
 
+    // console.log(this.state)
     return (
       <div className="container">
         <div className="row">
