@@ -59,7 +59,7 @@ export default class App extends Component {
       item: selectedItem.title,
       id: id,
       editItem: true
-    }, () => console.log(this.state.editItem))
+    })
   
   }
 
