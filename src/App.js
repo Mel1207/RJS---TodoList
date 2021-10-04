@@ -13,6 +13,7 @@ export default class App extends Component {
     edititem: false
   }
 
+  // todo methods
   handleChange = e => {
     this.setState({
       item: e.target.value
@@ -62,8 +63,6 @@ export default class App extends Component {
 
   render() {
     // console.log(this.state.id)
-
-    // console.log(this.state)
     return (
       <div className="container">
         <div className="row">
