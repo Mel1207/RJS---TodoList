@@ -46,12 +46,12 @@ export default class App extends Component {
     console.log('Clear list')
   }
 
-  handleEdit = e => {
-    console.log(`handle edit ${this.id}`)
+  handleEdit = id => {
+    console.log(`handle edit ${this.state.id, id}`)
   }
 
-  handleDelete = e => {
-    console.log(`deleted item ${this.id}`)
+  handleDelete = id => {
+    console.log(`deleted item ${id}`)
   }
 
 
