@@ -10,7 +10,7 @@ export default class App extends Component {
     items: [],
     id: uuidv4(),
     item: '',
-    edititem: false
+    editItem: false
   }
 
   // todo methods
@@ -37,7 +37,7 @@ export default class App extends Component {
       items: updatedItems,
       item: '',
       id: uuidv4(),
-      edititem: false
+      editItem: false
     }, () => {
       console.log(this.state)
     })
@@ -50,7 +50,17 @@ export default class App extends Component {
   }
 
   handleEdit = id => {
-    console.log(`handle edit ${this.state.id, id}`)
+    // console.log(`handle edit ${this.state.id, id}`)
+    const filteredItems = this.state.items.filter(i => i.id !== id);
+    const selectedItem = this.state.items.find(i => i.id === id);
+    // console.log(selectedItem)
+    this.setState({
+      items: filteredItems,
+      item: selectedItem.title,
+      id: id,
+      editItem: true
+    })
+  
   }
 
   handleDelete = id => {
